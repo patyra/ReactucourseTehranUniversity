@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+		<!--<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+	
+		<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NQMFDR"></script>
+		<script src="chrome-extension://dpkgacdhagkgdhgmbfdhbmgdgnjibodb/js/common/commonext.js" type="text/javascript"></script>
+		<script src="chrome-extension://dpkgacdhagkgdhgmbfdhbmgdgnjibodb/injected/injected.js" type="text/javascript"></script>
+		<script src="chrome-extension://dpkgacdhagkgdhgmbfdhbmgdgnjibodb/injected/ready.js" type="text/javascript"></script>
+		<script src="chrome-extension://dpkgacdhagkgdhgmbfdhbmgdgnjibodb/injected/ready.js" type="text/javascript"></script>
+	
+-->
+
+<head>
+		<style>
+			script{
+				display: none;
+			}
+			body{
+				background-color: #f9f9f9;
+				display: block;
+				font-family: iransans;
+				font-size: 12px;
+				line-height: 1.5;
+				margin: 0;
+				padding: 0;
+				direction: rtl;
+			}
+			div{
+				display: block;
+			}
+			
+			a{
+				text-decoration: none;
+			}
+			form{
+				display: block;
+			    margin-top: 0em;
+			}
+			button {
+    -webkit-appearance: button;
+			}
+			#wholepage{
+				background-color: #f9f9f9;
+			}
+			#logo{
+				margin:auto;
+				display: block;
+				text-align: center;
+			}
+			.sepratespace{
+				max-width: 400px;
+				text-align: right;
+				height: 18px;
+				opacity: 1;
+				margin: 10px auto;
+				transition: opacity 0.3s ease 0s;
+
+			}
+			.loginform{
+				max-width: 400px;
+				min-height: 440px;
+				position: relative;
+				opacity: 1;
+				margin:0px auto;
+				border-radius: 5px;
+				padding: 5px;
+				text-align: right;
+ 			    color: rgb(120, 120, 120);
+				overflow: hidden;
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px 1px;
+				pointer-events: auto;
+    		    transition: filter 0.3s ease 0s, opacity 0.3s ease 0s;
+			}
+			.entertosignup{
+				float: left;
+			}
+			.ifnotmember{
+				position: static;
+				height: auto;
+				bottom: 0px;
+				left: auto;
+				right: auto;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 30px;
+				border-bottom: 1px solid rgb(240, 240, 240);
+				border-top: 0px none;
+			}
+		
+		.linkarrow:hover {
+    color: rgb(19, 126, 174);
+}
+
+.linkarrow {
+	color: rgb(35, 31, 32);
+    position: relative;
+    text-decoration: none;
+    padding-left: 17px;
+	color: rgb(5, 163, 232);
+}
+.linkarrow::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    left: 0px;
+    top: 7px;
+    transform: rotate(-45deg);
+    background: rgb(5, 163, 232);
+}
+.linkarrow::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    left: 0px;
+    top: 11px;
+    transform: rotate(-127deg);
+    background: rgb(5, 163, 232);
+}
+
+.loginpart{
+	transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: transparent 0px 0px 0px 0px inset;
+    z-index: 1;
+    opacity: 1;
+    padding-bottom: 0px;
+    transition: transform 0.35s cubic-bezier(0.57, 0.2, 0.25, 0.94) 0s, box-shadow 0.2s ease 0s, opacity 0.4s ease 0s;
+    background: rgb(255, 255, 255);
+}	
+.formcontainerlogin{
+position: static;
+    height: auto;
+    bottom: 0px;
+    left: auto;
+    right: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    border-top: 0px none;
+}	
+
+input:focus{
+border:1px solid gray;
+box-shadow: 0em red;
+}
+
+
+#username{
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+    direction: rtl;
+	border:1px solid #efefef;
+	width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    box-shadow: transparent 0px 0px 0px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(222, 223, 225);
+    border-image: initial;
+    padding: 0px 5px 0px 40px;
+}
+
+.glyphicon{
+	position: relative;
+    top: 25px!important;
+	left:15px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+	float: left;
+	color:lightgray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.forgetinfo{
+margin-left:10px;
+margin-top:20px;
+margin-bottom:20px;
+
+}
+.btnenter{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 100%;
+    float: none;
+    font-weight: 700;
+    background: rgb(234, 29, 93);
+    border-width: 0px;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px;
+    transition: background-color 0.3s ease 0s;
+}
+.orline{
+	text-align: center;
+    line-height: 0px;
+    margin: 40px 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.orline span{
+	background-color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    color: rgb(177, 169, 165);
+    padding: 0px 15px;
+}
+
+	.genter {
+    width: 100%;
+    color: rgb(221, 75, 57);
+    max-width: 280px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(221, 75, 57);
+    border-image: initial;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    margin: 0px auto;
+    padding: 7px;
+    outline: none;
+    transition: all 0.3s ease 0s;
+	text-align: center;
+}
+.genter:hover{
+background:rgb(221, 75, 57);
+color: rgb(255, 255, 255)
+}
+.genter svg{
+	fill: rgb(221, 75, 57);
+    transition: all 0.3s ease 0s;
+}
+.genter .svg-container {
+    position: absolute;
+    right: 20%;
+    top: 7px;
+}
+
+	.genter:hover svg {
+    fill: rgb(255, 255, 255);
+
+}
+
+
+</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+		<title>آپارات| ورود و عضویت</title>
+		<link rel="shortcut icon" href="/public/public/authenticate/assets/favicon.ico">
+	<!--	<link rel="stylesheet" href="/public/public/authenticate/assets/app.0b479d797c560a2426b1.css" type="text/css">
+		<script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-NQMFDR",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")</script>
+	-->
+	</head>
+	<body>
+		<div id="wholepage">
+			<div>
+				<a href="https://www.aparat.com/"><img id="logo" src="C:\Users\yas\Desktop\reactcourse\exercise\memberaparat1\aparatlogo.png" alt="logo"></a>
+			</div>
+			<div class="sepratespace"></div>
+			<div class="slide-forward">		
+					<div class="loginform">
+							<section class="loginpart">
+								<div class="ifnotmember">
+									اگر حساب کاربری ندارید، ثبت نام کنید:
+									<div class="entertosignup"><a class="linkarrow" href="https://www.aparat.com/authentication/signup">عضویت</a>
+									</div>
+								</div>
+								<div class="formcontainerlogin">
+									<form>
+
+					
+										<p class="enterifmember">اگر در آپارات حساب کاربری دارید، وارد شوید:</p>
+										
+										<span class="glyphicon glyphicon-user"></span>
+										<input  id="username" type="text"  placeholder="ایمیل، نام کاربری یا شماره موبایل" dir="auto" autocomplete="off" value>
+										
+									<div class="forgetinfo">
+										<span>اطلاعات ورود را فراموش کردید؟ </span>
+										<a href="https://www.aparat.com/authentication/forget-password">کمکتون میکنیم</a>
+									</div>
+										<button class="btnenter">ورود</button>
+									</form>
+									<div class="orline">
+										<span>یا</span>
+									</div>
+										<div>
+										<button class="genter">
+													ورود با گوگل
+													<span class="svg-container">
+														<svg viewBox="0 0 458.246 458.246" width="20px" height="20px">
+													<use xlink:href="#google-plus">
+															<svg viewBox="0 0 458.246 458.246" id="google-plus" width="100%" height="100%">
+																	<g>
+																		<path d="M160.777,259.368h71.594c-12.567,35.53-46.603,61.004-86.45,60.71   c-48.349-0.357-88.327-39.035-90.204-87.349c-2.012-51.789,39.537-94.563,90.887-94.563c23.479,0,44.905,8.946,61.058,23.605   c3.826,3.473,9.65,3.495,13.413-0.047l26.296-24.749c4.112-3.871,4.127-10.408,0.027-14.292   c-25.617-24.269-59.981-39.396-97.876-40.136C68.696,80.969,0.567,147.238,0.004,228.078   c-0.568,81.447,65.285,147.649,146.6,147.649c78.199,0,142.081-61.229,146.36-138.358c0.114-0.967,0.189-33.648,0.189-33.648   H160.777c-5.426,0-9.824,4.398-9.824,9.824v35.999C150.953,254.97,155.352,259.368,160.777,259.368z"></path>
+																		<path d="M414.464,206.99v-35.173c0-4.755-3.854-8.609-8.609-8.609h-29.604c-4.755,0-8.609,3.854-8.609,8.609   v35.173h-35.173c-4.755,0-8.609,3.854-8.609,8.609v29.604c0,4.755,3.854,8.609,8.609,8.609h35.173v35.173   c0,4.755,3.854,8.609,8.609,8.609h29.604c4.755,0,8.609-3.854,8.609-8.609v-35.173h35.173c4.755,0,8.609-3.854,8.609-8.609v-29.604   c0-4.755-3.854-8.609-8.609-8.609L414.464,206.99L414.464,206.99z"></path>
+																	</g>
+																
+															</svg>
+
+													</use>
+												</svg>
+											</span>
+										</button>
+																						</div>
+									</div>
+							</section>
+								
+					</div>
+				</div>
+		
+		</div>
+		
+	</body>
+</html>
